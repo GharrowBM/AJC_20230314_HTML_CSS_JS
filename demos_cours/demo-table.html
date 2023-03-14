@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <title>Demo Tableaux</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="./index.html">Accueil</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Demo des tableaux</h1>
+    <hr>
+    <h3>Test</h3>
+
+    <!-- Pour faire un tableau en HTML, il nous faut utiliser la balise 'table' et mettre en son sein plusieurs lignes symbolisées par la balise 'tr' (pour table row), chacune des lignes devre contenir 'td' (pour table data) -->
+
+    <!-- Pour définir la bordure d'un tableau, idéalement on ne le ferai pas en HTML pur mais en CSS. La syntaxe ci-dessous est donc dépréciée mais  présente pour un soucis de démonstration -->
+    <table border="black">
+      <tr>
+        <td>A</td>
+        <!-- Si l'on veut qu'une cellule de tableau s'etende sur plusieurs colonnes, on peut utiliser l'attribut 'colspan' et définir la portée de sa largeur (sur X colonnes) -->
+        <td colspan="2">B</td>
+        <td>C</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>E</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>G</td>
+        <td>H</td>
+        <td>I</td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <table border="black">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Description</th>
+          <th>Prix</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pomme</td>
+          <td>Fruit de base</td>
+          <td>1.29</td>
+        </tr>
+        <tr>
+          <td>Poire</td>
+          <td>Fruit classique</td>
+          <td>1.49</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total</td>
+          <td>2.78</td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+  <footer></footer>
+</body>
+</html>

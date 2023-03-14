@@ -4,15 +4,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <title>Accueil</title>
+  <style>
+    h2 {
+      color: green;
+    }
+  </style>
 </head>
 <body>
   <header>
     <!-- Ici nous trouverons en général le titre du site ainsi qu'une barre de navigation -->
+
+    <!-- La navigation de notre site web doit idéalement se trouver dans une balise de type 'nav' -->
+    <nav>
+      <!-- Un lien vers une page ou un emplacement se traduit par une 'ancre' qui est disponible avec la balise 'a'. Cette balise a pour attribut le 'href' qui doit pointer vers l'emplacement voulu  -->
+      <ul>
+        <li><a href="./demo-image.html">Démo des images</a></li>
+        <li><a href="./demo-table.html">Démo des tableaux</a></li>
+      </ul>
+      
+      
+
+      <!-- <a href="/demo-image.html">Démo des images</a> -->
+    </nav>
   </header>
   <main>
     <!-- Ici nous trouverons le contenu de la page en cours -->
-    <h1>Accueil</h1>
+    <h1 style="color:red">Accueil</h1>
     <h2>Heading 2</h2>
     <h3>Heading 3</h3>
     <h4>Headsing 4</h4>
@@ -55,9 +74,33 @@
     <br>
 
     <!-- Pour mettre un élément textuel en italique, il est possible de le faire avec les balises 'i' et 'em', la seconde spécifiant également aux aveugles et / ou à un moteur de recherche que cet élément est une potentielle légende d'image, une citation, un détails par rapport à ce qui se trouve à proximité, etc... -->
-    <i>Du texte en italique</i>
+    <i class="color-1">Du texte en italique</i>
     <em>Du texte en italique</em>
 
+    <hr>
+
+    <a href="https://google.com">Google</a>
+
+    <hr>
+    <!-- Pour faire une navigation, il est de bon ton de se servir d'un listing, qui se présente en HTML soit sous la forme d'une liste ordonnée 'ol', soit d'une liste non ordonnée 'ul'.
+      
+      Derrière l'une de ces deux balise devront se trouver les éléments de notre liste, symbolisés via l'utilisation des balises 'li' pour spécifier qu'il s'agit d'un 'list item'-->
+
+      <ol>
+        <li>Element A</li>
+        <li>Element B</li>
+        <li>Element C</li>
+      </ol>
+
+      <ul>
+
+        <!-- Pour sélectionner, en CSS et / ou en Javascript, des élements en particulier dans notre page, il existe deux attributs très important qu'il faut connaître: l'attribut 'class' et l'attribut 'id':
+        - class: Cet attribut va servir ç regrouper derrière un même nom de classe des éléments HTML
+        - id: Cet attribut va permettre de donner un identifiant (unique idéalement pour respecter les conventions) en particulier.  -->
+        <li>Element A</li>
+        <li class="color-1" id="li-A">Element B</li>
+        <li class="color-1">Element C</li>
+      </ul>
   </main>
   <footer>
     <!-- Ici nous trouverons la plupart du temps des liens usuels comme par exemple des pages importantes du site, des liens vers les réseaux sociaux, etc... -->

@@ -1,0 +1,32 @@
+h3 {
+  color: yellow;
+}
+
+ol {
+  /* Pour changer le style d'une liste ordonnée, on peut le faire via la propriété list-style qui peut idéalement avoir comme valeurs : decimal, lower-alpha, upper-alpha, lower-roman, upper-roman */
+  list-style: upper-alpha;
+}
+
+li {
+  color: orange;
+}
+
+/* Pour pouvoir sélectionner plus précisément dans notre CSS, il est possible de faire appel à ces sélecteurs basés sur une hierarchie particulière: 
+- 'parent enfant' => on sélectionne l'enfant du moment qu'il a un parent (plus ou moins proche) tel que défini
+- 'parent > enfant': on sélectionne l'enfant du moment qu'il est enfant direct du parent spécifié. */
+
+ul > li {
+  color: blue;
+}
+
+/* Pour cibler une classe en particulier depuis notre CSS, la syntaxe à utiliser est '.nom-de-classe' */
+li.color-1 {
+  color: yellow;
+}
+
+/* Pour cibler un ID en particulier dans notre CSS, la syntaxe à observer est '#nom-id' */
+#li-A {
+  color: green;
+}
+
+/* Les sélecteurs CSS respectent une hierarchie précise en ce qui concerne leur importance: balise < class < id */
