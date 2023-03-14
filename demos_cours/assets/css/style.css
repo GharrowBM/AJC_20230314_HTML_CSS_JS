@@ -86,3 +86,13 @@ li.color-1 {
 textarea {
   resize: none;
 }
+
+h1 {
+  color: blue;
+  display: inline;
+
+}
+
+.center-text {
+  text-align: center;
+}
