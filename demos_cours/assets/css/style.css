@@ -1,3 +1,8 @@
+body {
+  background-color: rgb(229, 220, 220);
+  /* background-image: url(http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg); */
+}
+
 h3 {
   color: yellow;
 }
@@ -30,3 +35,54 @@ li.color-1 {
 }
 
 /* Les sélecteurs CSS respectent une hierarchie précise en ce qui concerne leur importance: balise < class < id */
+
+.p-class {
+  /* Pour les couleurs, il est possible de se servir:
+  - Des variables de couleurs standards telles que 'red', 'green', 'orange', etc...
+  - Des couleurs de type hexadécimales : #RRGGBB
+  - Des couleurs en RGB : rgb(R, G, B)
+  - Des couleurs en RGBA : rgba(R, G, B, A) */
+  color: rgb(191, 56, 29);
+
+  /* Pour les tailles, il existe plusieurs valeurs possibles:
+  - Les valeurs en pixel: XXXpx
+  - Les tailles en rem (1rem = 16px): 1rem
+  - Un pourcentage de la taille du parent (dont la taille a une valeur fixée en CSS) le plus proche: 15%
+  - En fonction de la hauteur de la vue (de base le navigateur) : 15vh
+  - En fonction de la largeur de la vue (de base le navigateur): 20vw
+   */
+  font-size: 2rem;
+  font-weight: bold; /* normal | bold | lighter */
+  font-style: normal; /* italic | normal */
+  text-decoration: none; /* none | underline | line-through | overline */
+  text-transform: none; /* none | capitalize | uppercase | lowercase */
+  font-family: initial; /* Une succession de polices séparées par des virgules | types de polices: serif, sans-serif, monospace, cursive, fantasy... */
+  text-align: start; /* start, left | center | justify | end, right */
+}
+
+#boite-rouge-A {
+  /* Pour les valeurs de margins / paddings, il est possible de décrire soit:display: 
+  - Les 4 axes en même temps avec une valeur
+  - L'axe Y puis l'axe X avec deux valeurs
+  Haut Droite Bas Gauche avec 4 valeurs */
+  margin: 50px 20px 25px 10px;
+  padding: 20px 0 0 5px;
+
+  /* Styles de bordures: solid, dotted, dashed */
+  border: 5px solid black;
+  /* border-radius est utilisé principalement avec comme valeur des pixels, sauf si l'on veut faire un cercle où on utilisera pour le coup 50% */
+  border-radius: 50%;
+  /* Pour masquer les enfants qui peuvent dépasser des bords du parent, on utilise l'overflow: hidden */
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+  background-color: red;
+}
+
+.text-white {
+  color: yellow;
+}
+
+textarea {
+  resize: none;
+}

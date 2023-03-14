@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Demo Formulaires</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Accueil</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Demo des formulaires</h1>
+    <hr>
+    <form action="mailto:test@example.com" method="post">
+      <fieldset>
+        <legend>Données personnelles</legend>
+        <div>
+          <label for="prenom">Prenom:</label>
+          <input type="text" name="prenom" id="prenom" required>
+        </div>
+        <div>
+          <label for="nom">Nom:</label>
+          <input type="text" name="nom" id="nom" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+          <label for="telephone">Numéro de téléphone:</label>
+          <input type="text" name="telephone" id="telephone" required>
+        </div>
+        <div>
+          <label for="dateNaissance">Date de naissance:</label>
+          <input type="date" name="dateNaissance" id="dateNaissance" required>
+        </div>
+        <div>
+          <label for="password">Mot de passe:</label>
+          <input type="password" name="password" id="password" required>
+        </div>
+        <div>
+          <label for="important">Est-ce important ?</label>
+          <input type="checkbox" name="important" id="important">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Sujet</legend>
+        <div>
+          <label for="cat">Chat</label>
+          <input type="radio" name="animal" value="cat" id="cat">
+          <label for="dog">Dog</label>
+          <input type="radio" name="animal" value="dog" id="dog">
+        </div>
+        <div>
+          <label for="questionType">Type de question:</label>
+          <select name="questionType" id="questionType" required>
+            <option value="">Veuillez sélectionner une option...</option>
+            <option value="billing">Finances</option>
+            <option value="account">Compte</option>
+            <option value="technical">Technique</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+        </div>
+      </fieldset>
+      <button>Envoyer</button>
+    </form>
+  </main>
+  <footer></footer>
+</body>
+</html>
