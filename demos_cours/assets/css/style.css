@@ -242,3 +242,41 @@ h1 {
   flex-shrink: 10;
   background-color: blue;
 }
+
+.grid-container {
+  height: 500px;
+  width: 500px;
+  border: 1px solid black;
+  display: grid;
+  gap: 5px;
+
+  grid-template-columns:  200px repeat(2, 1fr); /* 200px 1fr 1fr */
+  grid-template-rows: repeat(4, 1fr); /* 1fr 1fr 1fr */
+}
+
+.gridbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#grid-box2 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+#grid-box4 {
+  background-color: red;
+  grid-row: 2;
+  /* grid-column: 1 / 4; */
+  grid-column: 1 / span 3;
+}
+
+#grid-box1, #grid-box3 {
+  grid-column: 1 / span 2;
+}
+
+#grid-box3 {
+  grid-row: 3 / span 2;
+  background-color: blue;
+}
