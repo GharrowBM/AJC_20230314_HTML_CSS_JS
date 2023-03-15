@@ -96,3 +96,41 @@ h1 {
 .center-text {
   text-align: center;
 }
+
+.boite-a {
+  /*
+    Pour positionner des éléments en CSS, il est possible de se servir de la propriété 'position' qui de base suit la valeur 'static'. 
+
+    - La position statique est celle qu'aurait lélément s'il suit le flux de la page (l'ordre de l'HTML)
+    - La position 'relative' est la position de l'élément relativement à son emplacement de base, qui est conservé dans le flux de la page.
+    - La position 'fixed' qui permet de positionner l'élément par rapport à la page du navigateur
+    - La position 'absolute' qui va se positionner de façon absolue par rapport à son parent relatif le plus proche (en cas d'absence d'un tel parent, cela sera par rapport à la vue du navigateur, qui elle est positionnée relativement dans notre interface d'ordinateur)
+    - La position 'sticky' qui va permettre de faire se coller l'élément à des bords de notre écran si la valeur de son décalage par rapport au haut, bas, gauche ou droite est censée passer en dessosu de la valeur minimale fixée
+
+  */
+  position: relative;
+  top: 20px;
+  left: 10px;
+  z-index: -1;
+  height: 500px;
+  width: 500px;
+  background-color: red;
+}
+
+.boite-b {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  z-index: -1;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+}
+
+.boite-c {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: orange;
+}
