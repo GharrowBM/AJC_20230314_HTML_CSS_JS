@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Accueil</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Pour pouvoir utiliser Bootstrap, la plupart du temps, il va falloir utiliser une div possédant la classe de 'container'. Cette classe va servir à définir le fait que son contenant doit posséder des bordures sur la gauiche et la droite du site. Pour placer ce conteneur seulement sur certaines largeurs d'écran, il est possible d'utiliser les breakpoints. Les breakspoints servent à Bootstrap pour appliquer des classes seulement à partir d'une certaine largeur d'écran. Par exemple 'container-xl' va faire que notre élément se comporte comme un conteneur seulement à partir d'une largeur égale ou supérieur au breakpoint XL. -->
+
+    <main class="container">
+      <h1>Accueil</h1>
+      <hr />
+
+      <!-- Suite au conteneur, la plupart du temps l'agencement d'éléments dans un site fait avec Boostrap passe par l'utilisation d'un row et de X colonnes. Le row servant à délimiter la ligne utilisée par les colonnes. Si l'on veut avoir plusieurs lignes de colonnes, il va falloir soit placer correctements la largeur de nos colonnes, soit simplement utiliser deux 'row'.
+      
+      Par défaut, le row va se baser sur une largeur dynamique pouvant atteindre un quota de 12 colonnes disponibles ( ces 12 colonnes seront disponible dés que l'on cherche à fixer manuellement la largeur des colonnes et / ou de fixer le nombre de colonnes de notre ligne) -->
+      <div class="row g-3 row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6">
+        <!-- Pour créer des colonnes, il suffit de placer la classe de 'col' sur une div enfant d'un 'row'. A partir de ce moment là, les colonnes vont chercher à se répartir l'espace non défini entre elles de façon équitables. Si l'on veut que nos colonnes prennent une certaine largeur fixée par nos soin, on peut utiliser 'col-X' où X est une valeur entre 1 et 12. -->
+        <div class="col">
+          <div class="text-center bg-success">Boite A</div>
+        </div>
+        <div class="col">
+          <div class="text-center bg-danger">Boite B</div>
+        </div>
+        <div class="col">
+          <div class="text-center bg-warning">Boite C</div>
+        </div>
+        <div class="col">
+          <div class="text-center bg-primary">Boite D</div>
+        </div>
+        <div class="col">
+          <div class="text-center bg-success">Boite A</div>
+        </div>
+        <div class="col">
+          <div class="text-center bg-danger">Boite B</div>
+        </div>
+        <div class="col">
+          <div class="text-center bg-warning">Boite C</div>
+        </div>
+        <div class="col">
+          <div class="text-center bg-primary" id="boite-a">Boite D</div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
