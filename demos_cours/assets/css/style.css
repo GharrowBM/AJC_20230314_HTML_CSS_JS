@@ -134,3 +134,111 @@ h1 {
   height: 50px;
   background-color: orange;
 }
+
+.flex-container {
+  height: 500px;
+  width: 80%;
+  border: 2px solid black;
+  display: flex;
+
+  /*
+    L'utilisation du display de type flex va nous permettre d'agencer nos éléments selons deux axes: l'axe principal et l'axe secondaire. Ces deux axes sont perpendiculaires, et l'on les défini à partir de la direction de l'axe principal: 
+
+    - row (par défaut) : gauche => droite
+    - row-reverse : droite -> gauche
+    - column : haut -> bas
+    - column-reverse : bas -> haut
+  */
+  flex-direction: row;
+
+  /*
+    L'utilisation de flex permet le wrapping, la capacité de nos éléments à se déplacer dans l'axe secondaire (par défaut vers le bas) et au début d'une nouvelle instance de notre axe principal. De base le wrapping est desactivé (nowrap) mais on peut l'activer de la sorte:
+  */
+  /* flex-wrap: wrap; */
+
+  /*
+    Si l'on le veut, on peut définir à la fois le flex-direction et le flex-wrap via l'utilisation de 'flex-flow'
+  */
+  /* flex-flow: row wrap; */
+
+  /*
+    Pour placer nos éléments dans l'axe principal de notre display flex, on utilise la propriété CSS 'justify-content' qui par défaut est à 'start' (la gauche si notre flex est de type gauche->droite et que l'on est dans une langue se lisant de gauche à droite)
+
+    - start, left : Gauche
+    - center : Au milieu
+    - end, right: Droite
+    - space-between: On réparti l'espace restant entre les éléments
+    - space-around: On va répartir l'espace disponible à la fois entre les éléments et avant et après les éléments de début et de fin
+    -space-evenly: Pour avoir le même espace entre les éléments qu'avant ou après les éléments de bordure
+  */
+
+  justify-content: space-evenly;
+
+  /*
+    Pour pouvoir aligner ou placer nos éléments sur l'axe secondaire, il nous faut utiliser 'align-items' avec comme valeurs:
+
+    - stretch (par défaut): Les éléments vont tenter de s'étendre sur toute la longueur de l'axe secondaire dispoonible
+    - start: Les éléments se placent au début de l'axe secondaire
+    - center: Les éléments se placent au centre de l'axe secondaire
+    - end: Les éléments se placent à la fin de l'axe secondaire
+  */
+
+  align-items: center;
+}
+
+.flexbox {
+  flex-basis: 150px;
+}
+
+.flexbox:nth-child(3n + 1) {
+
+  /*
+    Au niveau des enfants, il est possible de spécifier un alignement dans l'axe secondaire indépendamment de celui spécifié par le parent. Pour se faire, on utilise align-self avec comme valeurs possible: 
+
+    - flex-start: au début
+    - flex-end: A la fin
+    - center: Au centre
+    - stretch: S'etendre
+  */
+
+  /* align-self: flex-start; */
+
+  /*
+    Si l'on le veut, il est possible de changer l'ordre des éléments via la propriété CSS 'order'. Tous les éléments ont par défaut un ordre de valeur 0, et l'ordre sera de base suivant le flux (l'ordre dans l'HTML). Si l'on le veut, on peut donc passer au dela de cet ordre par défaut via la propriété CSS suivante:
+  */
+
+
+  order: 4;
+  background-color: red;
+}
+
+.flexbox:nth-child(3n + 2) {
+  /* align-self: flex-end; */
+
+
+  /*
+    Pour définir la taille qu'occupent les éléments enfants dans l'espace disponible, il existe trois propriétés flex qui sont:
+
+    - 'flex-grow' qui va fixer un rapport de force dans le but d'occuper plus ou moins fortement l'espace disponible s'il y en a.
+    - 'flex-basis' qui va servir à fixer la taille de base de l'élément. flex-basis, par défaut va valloir 'auto' qui est la valeur de la 'width' de notre élément
+
+    - 'flex-shrink' fixer aussi un rapport de force dans la rapidité de l'élément à se compresser.
+  */
+
+  flex-grow: 3;
+  flex-shrink: 5;
+
+  /*
+    Il est possible de regrouper dans l'ordre le flex-grow, le flex-shrink et le flex-basis derrière la propriété CSS 'flex'. De la sorte, on a une syntaxe un peu plus légère et on allège notre fichier de style. Attention cependant, ce genre de pratique nuit à la lisibilité de votre code.
+  */
+
+  /* flex: 3 5 150px; */
+  background-color: green;
+}
+
+.flexbox:nth-child(3n) {
+  flex-grow: 1;
+  order: -1;
+  flex-shrink: 10;
+  background-color: blue;
+}
