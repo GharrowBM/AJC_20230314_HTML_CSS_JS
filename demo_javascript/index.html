@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Pour ajouter du JAvascript dans notre HTML, il nous faut utiliser la balise 'script'. Cette balise doit être placée soit à la fin du body et de tout HTML personnel, doit avant en lui ajoutant l'attribut 'defer' pour retarder son exécution après le rendu de notre page HTML. Ceci dans un soucis de ne pas avoir des références manquantes lorsque l'on veut cibler des éléments HTML par la suite -->
+    <script defer src="./main.js"></script>
+  <title>Demo Javascript</title>
+</head>
+<body>
+  <main class="container">
+    <!-- Pour réaliser des margins avec Bootstrap, il va nous falloir utiliser la classe de 'm-X' où X est une valeur allant de 0 à 5 compris.
+    
+    Si l'on veut une marges sur l'axe vertical, on peut utiliser 'my-X', pour l'axe horizontale on a 'mx-X'.
+  
+  Si l'on veut faire une marge sur seulement un axe à la fois, on peut utiliser:
+  - Pour le haut => 'mt-X'
+  - Pour le bas => 'mb-X'
+  - Pour la gauche (dans un sens de lecture français) => 'ms-X'
+  - Pour la droite (dans un sens de lecture français) => 'me-X'
+-->
+
+    <div class="row my-3">
+      <h1>Demo de Javascript</h1>
+      <hr>
+    </div>
+  </main>
+</body>
+</html>
