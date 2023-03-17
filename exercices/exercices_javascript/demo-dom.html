@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script defer src="./assets/js/demo-dom.js"></script>
+    <title>Demo DOM</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="my-3 row">
+        <div class="col-10 offset-1 rounded bg-dark text-light p-3">
+          <h1 class="text-center">Démo Manip DOM</h1>
+          <hr>
+          <span id="span-a-changer">Je dois changer</span>
+          <hr>
+          <ul>
+            <li class="li-a-changer">Nous devons changer</li>
+            <li class="li-a-changer" id="li-b">Nous devons changer</li>
+            <li class="li-a-changer">Nous devons changer</li>
+            <li class="li-a-changer">Nous devons changer</li>
+          </ul>
+          <hr>
+          <button class="btn btn-success" id="btn-changement">Changer</button>
+          <hr>
+          <input type="text" class="form-control" id="input-a">
+          <hr>
+          <ul id="mes-fruits">
+          </ul>
+          <hr>
+          <button class="btn btn-warning" id="refresh-fruits-a">Refresh Fruits A</button>
+          <button class="btn btn-danger" id="refresh-fruits-b">Refresh Fruits B</button>
+        </div>
+      </div>
+    </main>
+</body>
+</html>
