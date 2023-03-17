@@ -111,3 +111,26 @@ const refreshBtnB = document.getElementById("refresh-fruits-b")
 
 refreshBtnA.addEventListener('click', refreshFruitsTextual)
 refreshBtnB.addEventListener('click', refreshFruitsJSFriendly)
+
+/*
+  Si l'on veut, on peut également réaliser un tableau d'objets, qui permettent de stocker un élement possédant des clés et des valeurs. Pour parcourir rapidement les clés et les valeurs d'un élément, il existe la boucle de type FOR...IN... qui permet de retourner une par une les clés d'un objet. Pour obtenir la valeur d'un obet, on a ensuite la possibilité de faire un 'nom_object[nom_clé]', qui équivaudrait à un 'nom_object.nom_clé'
+*/
+
+const mesPersonnes = [
+  {
+    id: 1,
+    firstname: "John",
+    lastname: "Dupont"
+  },
+  {
+    id: 2,
+    firstname: "Helène",
+    lastname: "MARTEZ"
+  }
+]
+
+for (const personne of mesPersonnes) {
+  for (const key in personne) {
+    console.log(`${key}: ${personne[key]}`)
+  }
+}

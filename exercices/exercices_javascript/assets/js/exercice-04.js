@@ -7,6 +7,7 @@ const mot = prompt("Veuillez entrer un mot")
 motSaisiEl.textContent = mot
 
 const motInverse = mot.split('').reverse().join('')
+// 'Kayak' => ['K', 'a', 'y', 'a', 'k'] => ['k', 'a', 'y', 'a', 'K'] => 'kayaK'
 
 motInverseEl.textContent = motInverse
 

@@ -24,3 +24,13 @@ else if (taille >= 169 && taille < 183 && poids >= 48 && poids <= 53 ||
 else {
   resultEl.textContent = "N/A";
 }
+
+switch (true) {
+  case (taille >= 145 && taille < 172 && poids >= 43 && poids <= 47 ):
+  case (taille >= 145 && taille < 169 && poids >= 48 && poids <= 53):
+    resultEl.textContent = "1"
+    break;
+
+  
+}
+
