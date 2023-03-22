@@ -30,7 +30,8 @@
         <%-- Pour faire une itération, on va utiliser :forEach dans lequel l'attribut 'items' sert à définir quelle variable va être itérée et l'attribut 'var' sert à donner une valeur à la variable en
         cours d'itération --%>
         <c:forEach items="${mesItems}" var="item">
-            <li><c:out value="${item}"/></li>
+            <%-- for (String item : mesItems )--%>
+            <li><c:out value="${item}"/> <a href="/test/delete/${item}"></a></li>
         </c:forEach>
     </ul>
 </main>
